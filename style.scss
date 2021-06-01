@@ -4,11 +4,20 @@ $color-sedans: hsl(31, 77%, 52%);
 $color-suvs: hsl(184, 100%, 22%);
 $color-luxury: hsl(179, 100%, 13%);
 
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
 .cards {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
     overflow: hidden;
+    max-width: 800px;
 
     @media screen and (min-width: $breakpoint-horizontal) {
         flex-direction: row;
