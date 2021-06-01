@@ -1,0 +1,87 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+}
+@media screen and (min-width: 600px) {
+  .cards {
+    flex-direction: row;
+  }
+}
+.cards .card {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.cards .card-title {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.cards .card-content {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: auto;
+}
+.cards .card-button {
+  display: inline-block;
+  border: 2px solid #ffffff;
+  text-decoration: none;
+  padding: 6px 15px;
+  border-radius: 20px;
+  background-color: #fff;
+  font-size: 0.8rem;
+  width: fit-content;
+  margin-top: 30px;
+  transition: background-color 0.2s;
+}
+.cards .card-logo {
+  margin-bottom: 20px;
+  background-size: cover;
+  width: calc(64px / 100 * 90);
+  height: calc(40px / 100 * 90);
+}
+.cards .card-sedans {
+  background-color: #e38826;
+}
+.cards .card-sedans .card-logo {
+  background-image: url("/images/icon-sedans.svg");
+}
+.cards .card-sedans .card-button {
+  color: #e38826;
+}
+.cards .card-sedans .card-button:hover {
+  background-color: transparent;
+  color: #fff;
+}
+.cards .card-suvs {
+  background-color: #006970;
+}
+.cards .card-suvs .card-logo {
+  background-image: url("/images/icon-suvs.svg");
+}
+.cards .card-suvs .card-button {
+  color: #006970;
+}
+.cards .card-suvs .card-button:hover {
+  background-color: transparent;
+  color: #fff;
+}
+.cards .card-luxury {
+  background-color: #004241;
+}
+.cards .card-luxury .card-logo {
+  background-image: url("/images/icon-luxury.svg");
+}
+.cards .card-luxury .card-button {
+  color: #004241;
+}
+.cards .card-luxury .card-button:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

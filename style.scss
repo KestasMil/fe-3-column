@@ -1,0 +1,108 @@
+$logo-scale: 90;
+$breakpoint-horizontal: 600px;
+$color-sedans: hsl(31, 77%, 52%);
+$color-suvs: hsl(184, 100%, 22%);
+$color-luxury: hsl(179, 100%, 13%);
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+
+    @media screen and (min-width: $breakpoint-horizontal) {
+        flex-direction: row;
+    }
+
+
+    .card {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            font-family: 'Big Shoulders Display', cursive;
+            font-size: 2rem;
+            color: hsla(0, 0%, 100%, 0.80);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        &-content {
+            font-size: 0.8rem;
+            color: hsla(0, 0%, 100%, 0.5);
+            margin-bottom: auto;
+        }
+
+        &-button {
+            display: inline-block;
+            border: 2px solid #ffffff;
+            text-decoration: none;
+            padding: 6px 15px;
+            border-radius: 20px;
+            background-color: #fff;
+            font-size: 0.8rem;
+            width: fit-content;
+            margin-top: 30px;
+            transition: background-color 0.2s;
+        }
+
+        &-logo {
+            margin-bottom: 20px;
+            background-size: cover;
+            width: calc(64px / 100 * #{$logo-scale});
+            height: calc(40px / 100 * #{$logo-scale});
+        }
+
+        &-sedans {
+            background-color: $color-sedans;
+
+            & .card-logo {
+                background-image: url('/images/icon-sedans.svg');
+            }
+
+            & .card-button {
+                color: $color-sedans;
+
+                &:hover {
+                    background-color: transparent;
+                    color: #fff;
+                }
+            }
+        }
+
+        &-suvs {
+            background-color: $color-suvs;
+
+            & .card-logo {
+                background-image: url('/images/icon-suvs.svg');
+            }
+
+            & .card-button {
+                color: $color-suvs;
+
+                &:hover {
+                    background-color: transparent;
+                    color: #fff;
+                }
+            }
+        }
+
+        &-luxury {
+            background-color: $color-luxury;
+
+            & .card-logo {
+                background-image: url('/images/icon-luxury.svg');
+            }
+
+            & .card-button {
+                color: $color-luxury;
+
+                &:hover {
+                    background-color: transparent;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
